@@ -1,25 +1,15 @@
-import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation"
 
-import NavBar from "@/components/navbar";
-
-export default async function DashboardLayout({
-  children,
+const GroupPage = async ({
   params
 }: {
-  children: React.ReactNode;
   params: { groupId: string }
-}) {
-  const { userId } = auth();
-
-  if(!userId) {
-    redirect('/sign-in')
-  }
+}) => {
 
   return (
-    <>
-      <NavBar />
-      {children}
-    </>
+    <div className="flex-col">
+        Group page
+    </div>
   )
 }
+
+export default GroupPage;
