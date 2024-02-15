@@ -1,3 +1,4 @@
+import NavBar from "@/components/navbar";
 import { auth } from "@clerk/nextjs"
 import { redirect } from "next/navigation";
 
@@ -14,6 +15,7 @@ export default async function SetupLayout({
 
   return (
     <>
+      <NavBar />
       {children}
     </>
   )
