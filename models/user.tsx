@@ -1,6 +1,7 @@
 interface User {
     id: number,
-    name: string,
+    firstName: string,
+    lastName: string,
     email: string,
     profilePic: string,
     groups: string[],
