@@ -42,7 +42,6 @@ export const GroupClient: React.FC<GroupClientProps> = ({
       </div>
       <Separator />
       <DataTable columns={columns} data={data} searchKey="name" />
-      <div>Hello {user?.firstName} </div>
     </>
   )
 }
