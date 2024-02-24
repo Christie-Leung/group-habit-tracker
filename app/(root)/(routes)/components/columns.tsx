@@ -1,15 +1,28 @@
 "use client"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 import { Group } from "@/models/group"
 import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown } from "lucide-react"
 import Link from "next/link"
+import { CellAction } from "./cell-action"
 
 
 export const columns: ColumnDef<Group>[] = [
     {
         accessorKey: "name",
-        header: "Name",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Name
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
         cell: ({ row }) => {
             
             return (
@@ -51,4 +64,8 @@ export const columns: ColumnDef<Group>[] = [
         accessorKey: "habits",
         header: "Habits"
     },
+    {
+        id: "actions",
+        cell: ({ row }) => <CellAction data={row.original} />
+    }
 ]
