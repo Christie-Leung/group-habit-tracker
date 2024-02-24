@@ -50,7 +50,7 @@ export const columns: ColumnDef<Group>[] = [
                     if (!lastName) lastName = ""
 
                     return (
-                        <Avatar>
+                        <Avatar key={`${firstName}-${lastName}`}>
                             <AvatarImage src={user.profilePic}/>
                             <AvatarFallback>{firstName[0]}{lastName[0]}</AvatarFallback>
                         </Avatar>
