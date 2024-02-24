@@ -8,7 +8,6 @@ import { ArrowUpDown } from "lucide-react"
 import Link from "next/link"
 import { CellAction } from "./cell-action"
 
-
 export const columns: ColumnDef<Group>[] = [
     {
         accessorKey: "name",
