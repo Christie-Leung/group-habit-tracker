@@ -127,7 +127,7 @@ export function CreateGroupForm() {
                 <Separator />
                 {fields.map((field, index) => {
                     return (
-                    <div>
+                    <div key={index}>
                         <h2 className="text-xl font-bold tracking-tight">Habit #{index+1}</h2>
                         <div className="grid grid-cols-2 gap-x-10 gap-y-4 mb-4" key={field.id}>
                             <FormField
