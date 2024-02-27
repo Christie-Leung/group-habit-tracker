@@ -34,7 +34,7 @@ export const GroupClient: React.FC<GroupClientProps> = ({
             <Search className="mr-2 h-4 w-4" />
             Join Group
           </Button>
-          <Button onClick={() => router.push(`/group/${params.groupId}/create`)}>
+          <Button onClick={() => router.push(`/group/create`)}>
             <Plus className="mr-2 h-4 w-4" />
             Create New
           </Button>
